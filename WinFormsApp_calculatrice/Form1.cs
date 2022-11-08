@@ -21,6 +21,7 @@ namespace WinFormsApp_calculatrice
             
             firstOPnumeric = int.Parse(firstOP);
             secondOPnumeric = int.Parse(secondOP);
+
             if(theOperator =="+")
             {
                 resultat = firstOPnumeric + secondOPnumeric;
@@ -158,6 +159,11 @@ namespace WinFormsApp_calculatrice
             collector = "";
             LblOPERATION.Text = "____";
             LblRESULTAT.Text = "0";
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
