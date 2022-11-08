@@ -170,22 +170,24 @@
             // 
             // BtnEGALE
             // 
+            this.BtnEGALE.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnEGALE.Location = new System.Drawing.Point(420, 476);
             this.BtnEGALE.Name = "BtnEGALE";
             this.BtnEGALE.Size = new System.Drawing.Size(172, 73);
             this.BtnEGALE.TabIndex = 14;
             this.BtnEGALE.Text = "=";
-            this.BtnEGALE.UseVisualStyleBackColor = true;
+            this.BtnEGALE.UseVisualStyleBackColor = false;
             this.BtnEGALE.Click += new System.EventHandler(this.BtnEGALE_Click);
             // 
             // BtnSUPPRIMER
             // 
+            this.BtnSUPPRIMER.BackColor = System.Drawing.Color.Red;
             this.BtnSUPPRIMER.Location = new System.Drawing.Point(453, 147);
             this.BtnSUPPRIMER.Name = "BtnSUPPRIMER";
             this.BtnSUPPRIMER.Size = new System.Drawing.Size(139, 49);
             this.BtnSUPPRIMER.TabIndex = 15;
             this.BtnSUPPRIMER.Text = "DELETE";
-            this.BtnSUPPRIMER.UseVisualStyleBackColor = true;
+            this.BtnSUPPRIMER.UseVisualStyleBackColor = false;
             this.BtnSUPPRIMER.Click += new System.EventHandler(this.BtnSUPPRIMER_Click);
             // 
             // BtnDEUX

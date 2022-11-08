@@ -7,7 +7,7 @@ namespace WinFormsApp_calculatrice
             InitializeComponent();
         }
         string collector = "";
-        string firstOP = "";
+        string firstOP = "0";
         string secondOP = "";
         string theOperator = "";
         string operation = "";
@@ -20,7 +20,13 @@ namespace WinFormsApp_calculatrice
             int secondOPnumeric;
             
             firstOPnumeric = int.Parse(firstOP);
-            secondOPnumeric = int.Parse(secondOP);
+            if (secondOP!="") {
+                secondOPnumeric = int.Parse(secondOP);
+            }
+            else
+            {
+                secondOPnumeric = 0;
+            }
             
             if(theOperator =="+")
             {
@@ -34,7 +40,14 @@ namespace WinFormsApp_calculatrice
                 resultat= firstOPnumeric * secondOPnumeric;
             }else if(theOperator == "/")
             {
-                
+                if (secondOP != "")
+                {
+                    secondOPnumeric = int.Parse(secondOP);
+                }
+                else
+                {
+                    secondOPnumeric = 1;
+                }
                 resultat = firstOPnumeric / secondOPnumeric;                                
             }
             
@@ -116,16 +129,32 @@ namespace WinFormsApp_calculatrice
 
         private void BtnPLUS_Click(object sender, EventArgs e)
         {
-            firstOP = collector;
+            if (firstOP=="") {
+                firstOP = collector;
+            }
+            else
+            {
+                secondOP=collector;
+                firstOP = GetResult().ToString();
+                secondOP = "";
+            }
             collector = "";
-            theOperator = "+";
-            
+            theOperator = "+";            
             operation = firstOP + theOperator; 
         }
 
         private void BtnMOIN_Click(object sender, EventArgs e)
         {
-            firstOP = collector;
+            if (firstOP == "")
+            {
+                firstOP = collector;
+            }
+            else
+            {
+                secondOP = collector;
+                firstOP = GetResult().ToString();
+                secondOP = "";
+            }
             collector = "";
             theOperator = "-";
             operation = firstOP + theOperator;
@@ -133,7 +162,16 @@ namespace WinFormsApp_calculatrice
 
         private void BtnMULTIPLIE_Click(object sender, EventArgs e)
         {
-            firstOP = collector;
+            if (firstOP == "")
+            {
+                firstOP = collector;
+            }
+            else
+            {
+                secondOP = collector;
+                firstOP = GetResult().ToString();
+                secondOP = "";
+            }
             collector = "";
             theOperator = "*";
             operation = firstOP + theOperator;
@@ -141,7 +179,16 @@ namespace WinFormsApp_calculatrice
 
         private void BtnDIVISE_Click(object sender, EventArgs e)
         {
-            firstOP = collector;
+            if (firstOP == "")
+            {
+                firstOP = collector;
+            }
+            else
+            {
+                secondOP = collector;
+                firstOP = GetResult().ToString();
+                secondOP = "";
+            }
             collector = "";
             theOperator = "/";
             operation = firstOP + theOperator;
@@ -162,7 +209,8 @@ namespace WinFormsApp_calculatrice
             collector = "";
             LblOPERATION.Text = "____";
             LblRESULTAT.Text = "0";
-
+            firstOP = "";
+            secondOP = "";
         }
 
         private void Form1_Load(object sender, EventArgs e)
