@@ -186,6 +186,7 @@
             this.BtnSUPPRIMER.TabIndex = 15;
             this.BtnSUPPRIMER.Text = "DELETE";
             this.BtnSUPPRIMER.UseVisualStyleBackColor = true;
+            this.BtnSUPPRIMER.Click += new System.EventHandler(this.BtnSUPPRIMER_Click);
             // 
             // BtnDEUX
             // 
