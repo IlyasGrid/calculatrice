@@ -7,7 +7,7 @@ namespace WinFormsApp_calculatrice
             InitializeComponent();
         }
         string collector = "";
-        string firstOP = "0";
+        string firstOP = "";
         string secondOP = "";
         string theOperator = "";
         string operation = "";
@@ -20,13 +20,8 @@ namespace WinFormsApp_calculatrice
             int secondOPnumeric;
             
             firstOPnumeric = int.Parse(firstOP);
-            if (secondOP!="") {
-                secondOPnumeric = int.Parse(secondOP);
-            }
-            else
-            {
-                secondOPnumeric = 0;
-            }
+            secondOPnumeric = int.Parse(secondOP);
+    
             
             if(theOperator =="+")
             {
@@ -39,15 +34,7 @@ namespace WinFormsApp_calculatrice
             {
                 resultat= firstOPnumeric * secondOPnumeric;
             }else if(theOperator == "/")
-            {
-                if (secondOP != "")
-                {
-                    secondOPnumeric = int.Parse(secondOP);
-                }
-                else
-                {
-                    secondOPnumeric = 1;
-                }
+            {               
                 resultat = firstOPnumeric / secondOPnumeric;                                
             }
             
