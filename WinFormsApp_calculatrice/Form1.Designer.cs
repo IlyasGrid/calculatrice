@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.BtnUN = new System.Windows.Forms.Button();
-            this.BtnDEUX = new System.Windows.Forms.Button();
             this.BtnTROIS = new System.Windows.Forms.Button();
             this.BtnCINQ = new System.Windows.Forms.Button();
             this.BtnQUATRE = new System.Windows.Forms.Button();
@@ -44,6 +43,9 @@
             this.BtnPLUS = new System.Windows.Forms.Button();
             this.BtnEGALE = new System.Windows.Forms.Button();
             this.BtnSUPPRIMER = new System.Windows.Forms.Button();
+            this.BtnDEUX = new System.Windows.Forms.Button();
+            this.LblRESULTAT = new System.Windows.Forms.Label();
+            this.LblOPERATION = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnUN
@@ -55,16 +57,6 @@
             this.BtnUN.Text = "1";
             this.BtnUN.UseVisualStyleBackColor = true;
             this.BtnUN.Click += new System.EventHandler(this.BtnUN_Click);
-            // 
-            // BtnDEUX
-            // 
-            this.BtnDEUX.Location = new System.Drawing.Point(320, 337);
-            this.BtnDEUX.Name = "BtnDEUX";
-            this.BtnDEUX.Size = new System.Drawing.Size(112, 34);
-            this.BtnDEUX.TabIndex = 1;
-            this.BtnDEUX.Text = "2";
-            this.BtnDEUX.UseVisualStyleBackColor = true;
-            this.BtnDEUX.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnTROIS
             // 
@@ -168,7 +160,7 @@
             // 
             // BtnMOIN
             // 
-            this.BtnMOIN.Location = new System.Drawing.Point(603, 276);
+            this.BtnMOIN.Location = new System.Drawing.Point(603, 266);
             this.BtnMOIN.Name = "BtnMOIN";
             this.BtnMOIN.Size = new System.Drawing.Size(112, 34);
             this.BtnMOIN.TabIndex = 12;
@@ -204,13 +196,45 @@
             this.BtnSUPPRIMER.TabIndex = 15;
             this.BtnSUPPRIMER.Text = "DELETE";
             this.BtnSUPPRIMER.UseVisualStyleBackColor = true;
-            this.BtnSUPPRIMER.Click += new System.EventHandler(this.BtnSUPPRIMER_Click);
+            // 
+            // BtnDEUX
+            // 
+            this.BtnDEUX.Location = new System.Drawing.Point(320, 337);
+            this.BtnDEUX.Name = "BtnDEUX";
+            this.BtnDEUX.Size = new System.Drawing.Size(112, 34);
+            this.BtnDEUX.TabIndex = 16;
+            this.BtnDEUX.Text = "2";
+            this.BtnDEUX.UseVisualStyleBackColor = true;
+            this.BtnDEUX.Click += new System.EventHandler(this.BtnDEUX_Click);
+            // 
+            // LblRESULTAT
+            // 
+            this.LblRESULTAT.AutoSize = true;
+            this.LblRESULTAT.Location = new System.Drawing.Point(359, 136);
+            this.LblRESULTAT.Name = "LblRESULTAT";
+            this.LblRESULTAT.Size = new System.Drawing.Size(22, 25);
+            this.LblRESULTAT.TabIndex = 17;
+            this.LblRESULTAT.Text = "0";
+            this.LblRESULTAT.Click += new System.EventHandler(this.LblRESULTAT_Click);
+            // 
+            // LblOPERATION
+            // 
+            this.LblOPERATION.AutoSize = true;
+            this.LblOPERATION.Location = new System.Drawing.Point(350, 65);
+            this.LblOPERATION.Name = "LblOPERATION";
+            this.LblOPERATION.Size = new System.Drawing.Size(47, 25);
+            this.LblOPERATION.TabIndex = 18;
+            this.LblOPERATION.Text = "_____";
+            this.LblOPERATION.Click += new System.EventHandler(this.LblOPERATION_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LblOPERATION);
+            this.Controls.Add(this.LblRESULTAT);
+            this.Controls.Add(this.BtnDEUX);
             this.Controls.Add(this.BtnSUPPRIMER);
             this.Controls.Add(this.BtnEGALE);
             this.Controls.Add(this.BtnPLUS);
@@ -225,18 +249,17 @@
             this.Controls.Add(this.BtnQUATRE);
             this.Controls.Add(this.BtnCINQ);
             this.Controls.Add(this.BtnTROIS);
-            this.Controls.Add(this.BtnDEUX);
             this.Controls.Add(this.BtnUN);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Button BtnUN;
-        private Button BtnDEUX;
         private Button BtnTROIS;
         private Button BtnCINQ;
         private Button BtnQUATRE;
@@ -251,5 +274,8 @@
         private Button BtnPLUS;
         private Button BtnEGALE;
         private Button BtnSUPPRIMER;
+        private Button BtnDEUX;
+        private Label LblRESULTAT;
+        private Label LblOPERATION;
     }
 }

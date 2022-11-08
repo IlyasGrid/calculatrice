@@ -7,10 +7,7 @@ namespace WinFormsApp_calculatrice
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+     
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -23,6 +20,11 @@ namespace WinFormsApp_calculatrice
         {
 
         }
+       private void BtnDEUX_Click(object sender, EventArgs e)
+        {
+
+        }
+      
         private void BtnTROIS_Click(object sender, EventArgs e)
         {
 
@@ -83,7 +85,12 @@ namespace WinFormsApp_calculatrice
 
         }
 
-        private void BtnSUPPRIMER_Click(object sender, EventArgs e)
+        private void LblRESULTAT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblOPERATION_Click(object sender, EventArgs e)
         {
 
         }
