@@ -33,7 +33,6 @@
             this.BtnCINQ = new System.Windows.Forms.Button();
             this.BtnQUATRE = new System.Windows.Forms.Button();
             this.BtnSIX = new System.Windows.Forms.Button();
-            this.BtnZERO = new System.Windows.Forms.Button();
             this.BtnSEPT = new System.Windows.Forms.Button();
             this.BtnHUIT = new System.Windows.Forms.Button();
             this.BtnNEUF = new System.Windows.Forms.Button();
@@ -46,6 +45,7 @@
             this.BtnDEUX = new System.Windows.Forms.Button();
             this.LblRESULTAT = new System.Windows.Forms.Label();
             this.LblOPERATION = new System.Windows.Forms.Label();
+            this.BtnZERO = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnUN
@@ -97,16 +97,6 @@
             this.BtnSIX.Text = "6";
             this.BtnSIX.UseVisualStyleBackColor = true;
             this.BtnSIX.Click += new System.EventHandler(this.BtnSIX_Click);
-            // 
-            // BtnZERO
-            // 
-            this.BtnZERO.Location = new System.Drawing.Point(320, 392);
-            this.BtnZERO.Name = "BtnZERO";
-            this.BtnZERO.Size = new System.Drawing.Size(112, 34);
-            this.BtnZERO.TabIndex = 6;
-            this.BtnZERO.Text = "0";
-            this.BtnZERO.UseVisualStyleBackColor = true;
-            this.BtnZERO.Click += new System.EventHandler(this.button6_Click);
             // 
             // BtnSEPT
             // 
@@ -227,11 +217,22 @@
             this.LblOPERATION.Text = "_____";
             this.LblOPERATION.Click += new System.EventHandler(this.LblOPERATION_Click);
             // 
+            // BtnZERO
+            // 
+            this.BtnZERO.Location = new System.Drawing.Point(320, 392);
+            this.BtnZERO.Name = "BtnZERO";
+            this.BtnZERO.Size = new System.Drawing.Size(112, 34);
+            this.BtnZERO.TabIndex = 19;
+            this.BtnZERO.Text = "0";
+            this.BtnZERO.UseVisualStyleBackColor = true;
+            this.BtnZERO.Click += new System.EventHandler(this.BtnZERO_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnZERO);
             this.Controls.Add(this.LblOPERATION);
             this.Controls.Add(this.LblRESULTAT);
             this.Controls.Add(this.BtnDEUX);
@@ -244,7 +245,6 @@
             this.Controls.Add(this.BtnNEUF);
             this.Controls.Add(this.BtnHUIT);
             this.Controls.Add(this.BtnSEPT);
-            this.Controls.Add(this.BtnZERO);
             this.Controls.Add(this.BtnSIX);
             this.Controls.Add(this.BtnQUATRE);
             this.Controls.Add(this.BtnCINQ);
@@ -264,7 +264,6 @@
         private Button BtnCINQ;
         private Button BtnQUATRE;
         private Button BtnSIX;
-        private Button BtnZERO;
         private Button BtnSEPT;
         private Button BtnHUIT;
         private Button BtnNEUF;
@@ -277,5 +276,6 @@
         private Button BtnDEUX;
         private Label LblRESULTAT;
         private Label LblOPERATION;
+        private Button BtnZERO;
     }
 }

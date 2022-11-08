@@ -8,13 +8,10 @@ namespace WinFormsApp_calculatrice
         }
 
      
-
-        private void button6_Click(object sender, EventArgs e)
+      private void BtnZERO_Click(object sender, EventArgs e)
         {
 
-        }
-
-        
+        }             
 
         private void BtnUN_Click(object sender, EventArgs e)
         {
@@ -94,5 +91,7 @@ namespace WinFormsApp_calculatrice
         {
 
         }
+
+  
     }
 }
