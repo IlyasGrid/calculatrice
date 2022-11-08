@@ -12,16 +12,16 @@ namespace WinFormsApp_calculatrice
         string theOperator = "";
         string operation = "";
 
-        int resultat;
+        double resultat;
 
-        private string GetResult()
+        private double GetResult()
         {
             int firstOPnumeric;
             int secondOPnumeric;
             
             firstOPnumeric = int.Parse(firstOP);
             secondOPnumeric = int.Parse(secondOP);
-
+            
             if(theOperator =="+")
             {
                 resultat = firstOPnumeric + secondOPnumeric;
@@ -34,10 +34,12 @@ namespace WinFormsApp_calculatrice
                 resultat= firstOPnumeric * secondOPnumeric;
             }else if(theOperator == "/")
             {
-                resultat = firstOPnumeric / secondOPnumeric;
+                
+                resultat = firstOPnumeric / secondOPnumeric;                                
             }
+            
 
-            return resultat.ToString();
+            return resultat;
         }
 
 
@@ -108,8 +110,8 @@ namespace WinFormsApp_calculatrice
             operation += secondOP ;
 
             LblOPERATION.Text = operation;
-            string res = GetResult();
-            LblRESULTAT.Text = res;
+            
+            LblRESULTAT.Text = GetResult().ToString();
         }
 
         private void BtnPLUS_Click(object sender, EventArgs e)
@@ -117,6 +119,7 @@ namespace WinFormsApp_calculatrice
             firstOP = collector;
             collector = "";
             theOperator = "+";
+            
             operation = firstOP + theOperator; 
         }
 
@@ -151,7 +154,7 @@ namespace WinFormsApp_calculatrice
 
         private void LblOPERATION_Click(object sender, EventArgs e)
         {
-            LblOPERATION.Text = collector;
+
         }
 
         private void BtnSUPPRIMER_Click(object sender, EventArgs e)

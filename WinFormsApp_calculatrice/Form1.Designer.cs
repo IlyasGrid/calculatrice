@@ -170,9 +170,9 @@
             // 
             // BtnEGALE
             // 
-            this.BtnEGALE.Location = new System.Drawing.Point(431, 465);
+            this.BtnEGALE.Location = new System.Drawing.Point(420, 476);
             this.BtnEGALE.Name = "BtnEGALE";
-            this.BtnEGALE.Size = new System.Drawing.Size(153, 60);
+            this.BtnEGALE.Size = new System.Drawing.Size(172, 73);
             this.BtnEGALE.TabIndex = 14;
             this.BtnEGALE.Text = "=";
             this.BtnEGALE.UseVisualStyleBackColor = true;
