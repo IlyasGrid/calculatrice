@@ -19,9 +19,17 @@ namespace WinFormsApp_calculatrice
             double firstOPnumeric;
             double secondOPnumeric;
 
+
+            if (firstOP == "")
+            {
+                firstOP = "0";
+            }
+            if (secondOP == "")
+            {
+                secondOP = "0";
+            }
             firstOPnumeric = double.Parse(firstOP);
             secondOPnumeric = double.Parse(secondOP);
-
 
             if (theOperator == "+")
             {
@@ -34,10 +42,29 @@ namespace WinFormsApp_calculatrice
             }
             else if (theOperator == "*")
             {
+                if (firstOP == "")
+                {
+                    firstOPnumeric = 0;
+                }
+                if (secondOP == "")
+                {
+                    secondOPnumeric = 1;
+                }
+
+
+
                 resultat = firstOPnumeric * secondOPnumeric;
             }
             else if (theOperator == "/")
             {
+                if (firstOP == "")
+                {
+                    firstOPnumeric = 0;
+                }
+                if (secondOP == "")
+                {
+                    secondOPnumeric = 1;
+                }
                 if (secondOPnumeric == 0)
                 {
                     return resultat = (-9999999999999999);
@@ -218,5 +245,56 @@ namespace WinFormsApp_calculatrice
         {
 
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.NumPad0)
+            {
+                BtnZERO.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad1)
+            {
+                BtnUN.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad2)
+            {
+                BtnDEUX.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad3)
+            {
+                BtnTROIS.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad4)
+            {
+                BtnQUATRE.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad5)
+            {
+                BtnCINQ.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad6)
+            {
+                BtnSIX.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad7)
+            {
+                BtnSEPT.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad8)
+            {
+                BtnHUIT.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad9)
+            {
+                BtnNEUF.PerformClick();
+            }
+
+
+
+        }
+
+
+
     }
 }
